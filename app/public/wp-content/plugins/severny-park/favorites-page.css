@@ -1,0 +1,14 @@
+.sp-favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 24px;
+}
+.sp-favorites-grid .wp-block-post-featured-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+}
+.sp-favorites-grid .sp-apartment-card {
+    overflow-wrap: anywhere;
+}
