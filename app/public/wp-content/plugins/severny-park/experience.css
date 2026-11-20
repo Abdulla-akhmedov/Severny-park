@@ -1,0 +1,201 @@
+/* Северный парк: общий визуальный слой. Все правила ограничены sp-experience. */
+body.sp-experience {
+    --sp-ink: #193b32;
+    --sp-green: #28634f;
+    --sp-deep: #153e33;
+    --sp-muted: #5c7067;
+    --sp-line: #dce7e0;
+    --sp-wash: #edf4ef;
+    --sp-font: "SP Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --wp--preset--font-family--manrope: var(--sp-font);
+    --wp--style--global--content-size: 760px;
+    --wp--style--global--wide-size: 1240px;
+    color: var(--sp-ink);
+    font-family: var(--sp-font);
+    font-size: 1rem;
+    line-height: 1.65;
+    background: radial-gradient(ellipse at 5% 0%, #dcebe0 0, transparent 36rem),
+        radial-gradient(ellipse at 100% 42rem, #e6efe8 0, transparent 40rem), #f6f9f6;
+}
+.sp-experience *, .sp-experience *::before, .sp-experience *::after { box-sizing: border-box; }
+.sp-experience :where(h1,h2,h3,h4,h5,h6,button,input,select,.wp-block-site-title) {
+    font-family: var(--sp-font) !important;
+}
+.sp-experience :where(h1,h2,h3,h4) { color: var(--sp-ink); font-weight: 500; letter-spacing: -.035em; line-height: 1.15; }
+.sp-experience h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+.sp-experience h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+.sp-experience h3 { font-size: 1.375rem; }
+.sp-experience p { text-wrap: pretty; }
+.sp-experience a { color: var(--sp-green); text-underline-offset: .22em; }
+.sp-experience :where(a,button,input,select):focus-visible { outline: 3px solid #b06b20; outline-offset: 4px; }
+.sp-experience .wp-site-blocks { padding-top: 0; padding-bottom: 0; }
+.sp-experience .wp-site-blocks > header {
+    position: sticky; top: 0; z-index: 30; margin-block-start: 0;
+    background: rgb(255 255 255 / 97%); border-bottom: 1px solid var(--sp-line);
+}
+.sp-experience.admin-bar .wp-site-blocks > header { top: 32px; }
+.sp-experience header > .wp-block-group { border-bottom: 0 !important; padding-block: 1.1rem !important; }
+.sp-experience header .wp-block-site-title { font-weight: 500 !important; font-size: clamp(1.25rem, 2.8vw, 1.75rem) !important; letter-spacing: -.045em; }
+.sp-experience header .wp-block-site-title a { color: var(--sp-deep); text-decoration: none; }
+.sp-experience .wp-block-navigation a { font-size: 1rem; text-decoration: none; }
+.sp-experience header .wp-block-navigation-item__content { display: inline-flex; gap: .4rem; align-items: center; padding: .5rem .75rem; border-radius: 999px; }
+.sp-experience header .wp-block-navigation-item__content:hover,
+.sp-experience header .current-menu-item > a { background: var(--sp-wash); color: var(--sp-deep); }
+.sp-favorites-badge { display: inline-grid; place-items: center; min-width: 1.4rem; min-height: 1.4rem; padding: 0 .35rem; border-radius: 999px; color: white; background: var(--sp-green); font-size: .875rem; font-weight: 500; }
+.sp-experience .wp-block-navigation__responsive-container.is-menu-open { background: #f6f9f6 !important; color: var(--sp-ink) !important; padding: 2rem; }
+.sp-experience .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content { padding: .75rem; }
+.sp-experience .wp-site-blocks > main { padding-inline: clamp(1rem, 3vw, 2rem); }
+.sp-experience .sp-home-hero {
+    position: relative; isolation: isolate; overflow: hidden;
+    display: grid; gap: 1.25rem; padding: clamp(1.5rem, 4vw, 3.5rem) !important;
+    background: var(--sp-deep) !important; border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: 2rem !important; color: white; box-shadow: 0 20px 60px rgb(25 59 50 / 10%);
+}
+.sp-experience .sp-home-hero::before {
+    content: ""; position: absolute; z-index: -1; width: 30rem; height: 30rem; left: -15rem; bottom: -25rem;
+    border: 5rem solid rgb(214 236 216 / 5%); border-radius: 50%; pointer-events: none;
+}
+.sp-experience .sp-home-hero > * { grid-column: 1; margin-block: 0 !important; min-width: 0; }
+.sp-experience .sp-home-hero > p:first-child { color: #c1dfc8 !important; font-size: .875rem; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; }
+.sp-experience .sp-home-hero h1 { max-width: 12ch; color: #fff; font-size: clamp(2.7rem, 5.5vw, 4.8rem) !important; line-height: 1.05; letter-spacing: -.055em; }
+.sp-experience .sp-home-hero > p:not(:first-child) { max-width: 48ch; color: #deebe2; font-size: 1.0625rem; }
+.sp-experience .sp-home-hero .wp-block-buttons { gap: .75rem; margin-top: .5rem !important; }
+.sp-experience .wp-block-button__link { min-height: 48px; padding: .85rem 1.35rem; border-radius: 999px !important; font-size: 1rem; font-weight: 500; text-decoration: none; }
+.sp-experience .sp-home-hero .wp-block-button:not(.is-style-outline) a { background: #e0efbf !important; color: #173b2e !important; border: 1px solid #e0efbf; }
+.sp-experience .sp-home-hero .is-style-outline a { background: transparent !important; color: #fff !important; border: 1px solid #809b8c; }
+.sp-experience .sp-home-hero .wp-block-button a:hover { filter: brightness(1.06); }
+.sp-experience .sp-hero-has-image { grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); column-gap: 3rem; align-content: center; }
+.sp-experience .sp-home-hero > .sp-hero-visual {
+    grid-column: 2; grid-row: 1 / span 4; position: relative; align-self: stretch;
+    min-height: 400px; border-radius: 1.25rem; overflow: hidden; background: #2d5144;
+}
+.sp-experience .sp-hero-image { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
+.sp-experience .sp-hero-visual::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgb(8 26 20 / 80%)); pointer-events: none; }
+.sp-experience .sp-hero-visual figcaption { position: absolute; z-index: 1; left: 1.4rem; right: 1.4rem; bottom: 1.3rem; color: #fff; font-size: 1.25rem; font-weight: 500; }
+.sp-experience .sp-hero-visual figcaption span { display: block; font-size: .875rem; font-weight: 400; color: #e1e9e3; margin-top: .3rem; }
+.sp-experience .sp-choice-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.25rem; margin-block: 1.75rem 3rem; }
+.sp-experience .sp-choice-step { padding: 1.5rem; border: 1px solid var(--sp-line); border-radius: 1.25rem; background: #fff; }
+.sp-experience .sp-choice-step h3 { font-size: 1.25rem; margin: 0 0 .75rem; }
+.sp-experience .sp-choice-step p { color: var(--sp-muted); margin: 0; }
+.sp-experience .sp-catalog-filters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: end; gap: 1rem; padding: 1.5rem; margin-block: 2rem; border: 1px solid var(--sp-line); border-radius: 1.5rem; background: rgb(255 255 255 / 94%); box-shadow: 0 8px 32px rgb(25 59 50 / 4%); }
+.sp-experience .sp-catalog-filters > div { min-width: 0; }
+.sp-experience .sp-catalog-filters label { color: var(--sp-muted); font-size: .875rem; font-weight: 500; }
+.sp-experience .sp-catalog-filters :where(input,select) { width: 100%; max-width: 100%; min-height: 48px; border: 1px solid #c3d3c9; border-radius: .75rem; padding: .75rem 1rem; background-color: #f7faf7; color: var(--sp-ink); font-size: 1rem; }
+.sp-experience .sp-catalog-filters select { appearance: none; padding-right: 2.75rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%2328634f' stroke-width='1.6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: 1rem; background-position: right 1rem center; }
+.sp-experience .sp-catalog-filters button { background: var(--sp-green); color: #fff; min-height: 48px; border-radius: .75rem; }
+.sp-experience .sp-catalog-filters > a { text-align: center; font-size: .9375rem; }
+.sp-experience .sp-catalog-summary { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; margin-block: 0 1.5rem; }
+.sp-experience .sp-catalog-summary p { margin: 0; font-size: .9375rem; color: var(--sp-muted); }
+.sp-experience .sp-catalog-summary p:first-child { color: var(--sp-ink); font-size: 1.0625rem; }
+.sp-experience .sp-apartment-card { padding: 1.25rem; gap: .9rem; border: 1px solid var(--sp-line); border-radius: 1.5rem; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgb(25 59 50 / 4%); transition: transform .2s ease, box-shadow .2s ease; }
+.sp-experience .sp-apartment-card .wp-block-post-featured-image { margin: -1.25rem -1.25rem .35rem; width: calc(100% + 2.5rem); overflow: hidden; }
+.sp-experience .sp-apartment-card .wp-block-post-featured-image a { display: block; }
+.sp-experience .sp-apartment-card .wp-block-post-featured-image img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0; transition: transform .45s ease; }
+.sp-experience .sp-apartment-card .wp-block-post-title { font-size: 1.5rem; line-height: 1.25; font-weight: 500; letter-spacing: -.025em; }
+.sp-experience .sp-apartment-card-meta { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .75rem; }
+.sp-experience .sp-apartment-card-meta p { margin: 0; font-size: 1rem; color: var(--sp-ink); }
+.sp-experience .sp-apartment-card-meta p strong { display: block; font-size: .875rem; font-weight: 400; color: var(--sp-muted); }
+.sp-experience .sp-apartment-card-meta p:first-child { grid-column: 1 / -1; padding-bottom: .75rem; margin-bottom: .15rem; border-bottom: 1px solid var(--sp-line); font-size: 1.5rem; font-weight: 500; color: var(--sp-deep); }
+.sp-experience .sp-apartment-card-meta p:first-child strong { display: none; }
+.sp-experience .sp-favorite-toggle, .sp-experience .sp-compare-toggle { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; padding: .65rem .9rem; border: 1px solid #c5d6cb; border-radius: .75rem; background: #fff; color: var(--sp-green); font: inherit; font-size: .9375rem; cursor: pointer; }
+.sp-experience .sp-favorite-toggle { width: 100%; align-self: stretch; }
+.sp-experience .sp-favorite-toggle::before { content: "♡"; font-family: sans-serif; font-size: 1.5rem; line-height: 1; }
+.sp-experience .sp-favorite-toggle[aria-pressed="true"] { background: var(--sp-wash); border-color: #8fb39d; }
+.sp-experience .sp-favorite-toggle[aria-pressed="true"]::before { content: "♥"; font-size: 1.15rem; }
+.sp-experience .sp-compare-toggle { width: 100%; }
+.sp-experience .sp-compare-toggle[aria-pressed="true"] { background: var(--sp-deep); color: #fff; border-color: var(--sp-deep); }
+.sp-experience .sp-apartment-card > .wp-block-read-more { margin-top: auto; min-height: 46px; border-radius: .75rem; background: var(--sp-green); color: #fff; padding: .75rem; font-size: .9375rem; }
+.sp-experience .sp-apartment-card > .wp-block-read-more:hover { background: var(--sp-deep); }
+.sp-experience .sp-single-tools { border: 1px solid var(--sp-line); border-radius: 1.25rem; padding: 1.5rem; background: white; margin-block: 2rem; }
+.sp-experience .sp-unit-price { margin: 0 0 1rem; }
+.sp-experience .sp-unit-price span { display: block; font-size: .9375rem; color: var(--sp-muted); }
+.sp-experience .sp-unit-price strong { display: block; font-size: 1.75rem; font-weight: 500; }
+.sp-experience .sp-single-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.sp-experience .sp-single-actions > button { width: auto; flex: 1 1 12rem; }
+.sp-experience .sp-apartment-details { padding: 1.5rem; background: white; border: 1px solid var(--sp-line); border-radius: 1.25rem; margin-block: 2rem; }
+.sp-experience .sp-apartment-details h2 { font-size: 1.6rem; margin-top: 0; }
+.sp-experience .sp-apartment-details tr:last-child :is(td,th) { border-bottom: 0; }
+.sp-experience .sp-zoomable { position: relative; overflow: hidden; border-radius: 1.25rem; }
+.sp-experience .sp-image-zoom { position: absolute; right: .75rem; bottom: .75rem; z-index: 2; min-height: 44px; padding: .5rem 1rem; border: 1px solid #dce7e0; border-radius: 999px; background: rgb(255 255 255 / 95%); color: #193b32; font: inherit; font-size: .875rem; cursor: pointer; }
+.sp-experience .sp-favorites-grid { gap: 1.5rem; }
+.sp-experience .sp-favorites-status { padding: 1rem 1.25rem; border-radius: 1rem; background: var(--sp-wash); color: var(--sp-ink); }
+.sp-experience .wp-site-blocks > footer { margin-block-start: 4rem; }
+.sp-experience .wp-site-blocks > footer > .wp-block-group { background: var(--sp-deep) !important; color: #edf5ef !important; border-top: 0 !important; padding-block: 2.5rem !important; }
+.sp-experience footer :where(p,a,.wp-block-site-title) { color: #edf5ef; }
+.sp-experience footer .wp-block-site-title { font-weight: 500 !important; letter-spacing: -.03em; }
+.sp-experience footer a:hover { color: #d7e8b6; }
+.sp-experience .sp-compare-tray { position: fixed; z-index: 80; left: 50%; bottom: 1.25rem; transform: translateX(-50%); display: flex; align-items: center; gap: 1rem; width: max-content; max-width: calc(100% - 2rem); padding: 1rem 1.25rem; border: 1px solid #466c5c; border-radius: 1.25rem; background: #193e33; color: #fff; box-shadow: 0 12px 48px rgb(8 26 20 / 24%); }
+.sp-experience .sp-compare-tray[hidden], .sp-experience .sp-toast[hidden] { display: none; }
+.sp-experience.sp-has-comparison { padding-bottom: 7rem; }
+.sp-experience .sp-compare-tray p { margin: 0; font-size: 1rem; line-height: 1.4; }
+.sp-experience .sp-compare-tray small { display: block; color: #c9ded1; font-size: .875rem; }
+.sp-experience .sp-compare-tray button { flex-shrink: 0; min-height: 44px; padding: .65rem 1rem; font: inherit; font-size: .9375rem; border-radius: .75rem; cursor: pointer; }
+.sp-experience .sp-compare-open { color: #193e33; background: #e0efbf; border: 1px solid #e0efbf; }
+.sp-experience .sp-compare-open:disabled { opacity: .7; cursor: default; }
+.sp-experience .sp-compare-clear { color: #fff; background: transparent; border: 1px solid #769282; }
+.sp-experience .sp-toast { position: fixed; z-index: 120; left: 50%; bottom: 1.25rem; transform: translateX(-50%); width: max-content; max-width: min(36rem,calc(100% - 2rem)); padding: 1rem 1.25rem; background: #fff; color: var(--sp-ink); border: 1px solid var(--sp-line); border-radius: 1rem; box-shadow: 0 8px 40px rgb(8 26 20 / 18%); font-size: .9375rem; }
+.sp-experience.sp-has-comparison .sp-toast { bottom: 8rem; }
+.sp-experience .sp-dialog { width: min(1060px,calc(100% - 2rem)); max-height: calc(100dvh - 3rem); padding: 1.5rem; border: 1px solid var(--sp-line); border-radius: 1.5rem; background: #f6f9f6; color: var(--sp-ink); overflow: auto; box-shadow: 0 20px 80px rgb(0 0 0 / 25%); }
+.sp-experience .sp-dialog:not([open]) { display: none; }
+.sp-experience .sp-dialog::backdrop { background: rgb(8 26 20 / 75%); }
+.sp-experience .sp-dialog.sp-dialog-fallback[open] { position: fixed; inset: 0; margin: auto; z-index: 1000; outline: 100vmax solid rgb(8 26 20 / 75%); }
+.sp-experience.sp-modal-open { overflow: hidden; }
+.sp-experience .sp-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.sp-experience .sp-dialog-header h2 { font-size: clamp(1.5rem,3vw,2rem); margin: .3rem 0 0; }
+.sp-experience .sp-dialog-close, .sp-experience .sp-gallery-controls button, .sp-experience .sp-compare-remove, .sp-experience .sp-retry { min-height: 44px; padding: .6rem .85rem; border: 1px solid #bbcfc1; border-radius: .75rem; background: #fff; color: var(--sp-ink); font: inherit; font-size: .9375rem; cursor: pointer; }
+.sp-experience .sp-dialog-close { flex-shrink: 0; }
+.sp-experience .sp-compare-table-scroll { overflow-x: auto; overscroll-behavior: contain; border: 1px solid var(--sp-line); border-radius: 1rem; background: #fff; }
+.sp-experience .sp-compare-table { width: 100%; min-width: 560px; border-collapse: collapse; table-layout: fixed; font-size: 1rem; }
+.sp-experience .sp-compare-table th, .sp-experience .sp-compare-table td { padding: 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--sp-line); overflow-wrap: anywhere; }
+.sp-experience .sp-compare-table th { font-weight: 500; }
+.sp-experience .sp-compare-table tbody th { width: 24%; font-size: .9375rem; color: var(--sp-muted); font-weight: 400; }
+.sp-experience .sp-compare-table thead img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: .6rem; margin-bottom: .75rem; }
+.sp-experience .sp-compare-table thead a { display: block; text-decoration: none; margin-bottom: .5rem; }
+.sp-experience .sp-compare-table tr:last-child > * { border-bottom: 0; }
+.sp-experience .sp-compare-table tbody tr:first-child td { font-weight: 500; color: var(--sp-green); }
+.sp-experience .sp-dialog-status { color: var(--sp-muted); font-size: 1rem; }
+.sp-experience .sp-gallery-dialog { width: min(1150px,calc(100% - 2rem)); background: #102c24; border-color: #345a48; color: white; }
+.sp-experience .sp-gallery-dialog h2 { color: #fff; }
+.sp-experience .sp-gallery-dialog figure { margin: 0; }
+.sp-experience .sp-gallery-dialog img { display: block; max-height: 70dvh; width: 100%; object-fit: contain; border-radius: 1rem; }
+.sp-experience .sp-gallery-dialog figcaption { padding-top: 1rem; font-size: 1rem; color: #deebe2; }
+.sp-experience .sp-gallery-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; }
+.sp-experience .sp-gallery-controls p { margin: 0; font-size: .9375rem; }
+.sp-experience .sp-gallery-controls button:disabled { opacity: .5; cursor: default; }
+@media (min-width: 1160px) {
+    .sp-experience .sp-catalog-filters { grid-template-columns: 1fr 1fr 1fr 1.2fr auto auto; }
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+    .sp-experience .sp-apartment-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgb(25 59 50 / 10%); }
+    .sp-experience .sp-apartment-card:hover .wp-block-post-featured-image img { transform: scale(1.035); }
+}
+@media (max-width: 900px) {
+    .sp-experience .sp-hero-has-image { grid-template-columns: 1fr; }
+    .sp-experience .sp-home-hero h1 { max-width: 15ch; }
+    .sp-experience .sp-home-hero > .sp-hero-visual { grid-column: 1; grid-row: auto; min-height: 320px; }
+    .sp-experience .sp-choice-steps { grid-template-columns: 1fr; }
+    .sp-experience .sp-catalog-summary { flex-direction: column; gap: .35rem; }
+}
+@media (max-width: 640px) {
+    .sp-experience .sp-catalog-filters { grid-template-columns: 1fr; padding: 1.1rem; }
+    .sp-experience .sp-home-hero { border-radius: 1.25rem !important; }
+    .sp-experience .sp-home-hero > .sp-hero-visual { min-height: 260px; }
+    .sp-experience .sp-compare-tray { display: grid; grid-template-columns: 1fr auto; gap: .65rem; padding: .85rem; bottom: .75rem; }
+    .sp-experience .sp-compare-tray p { grid-column: 1 / -1; }
+    .sp-experience.sp-has-comparison { padding-bottom: 11rem; }
+    .sp-experience.sp-has-comparison .sp-toast { bottom: 11rem; }
+    .sp-experience .sp-dialog { padding: 1rem; border-radius: 1rem; width: calc(100% - 1rem); max-height: calc(100dvh - 1rem); }
+    .sp-experience .sp-dialog-header { gap: .5rem; }
+    .sp-experience .sp-gallery-controls { flex-wrap: wrap; }
+}
+@media (max-width:782px) {
+    .sp-experience.admin-bar .wp-site-blocks > header { top: 46px; }
+}
+@media (prefers-reduced-motion:reduce) {
+    .sp-experience *, .sp-experience *::before, .sp-experience *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+@media print {
+    body.sp-experience { background: white; color: black; padding-bottom: 0; }
+    .sp-experience :is(.sp-compare-tray,.sp-toast,.sp-image-zoom,.sp-favorite-toggle,.sp-compare-toggle) { display: none !important; }
+    .sp-experience .wp-site-blocks > header { position: static; }
+}
