@@ -1,0 +1,30 @@
+name: WordPress plugin checks
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  plugin:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: none
+          coverage: none
+      - name: Check PHP syntax
+        run: find app/public/wp-content/plugins/severny-park -name '*.php' -print0 | xargs -0 -n 1 php -l
+      - name: Check JavaScript syntax
+        run: |
+          node --check app/public/wp-content/plugins/severny-park/experience.js
+          node --check app/public/wp-content/plugins/severny-park/favorites.js
+          node --check app/public/wp-content/plugins/severny-park/favorites-page.js
+      - name: Check comparison behavior
+        run: node --test tests/experience.test.cjs
+      - name: Check PHP behavior with WordPress HTML API
+        run: php tests/experience.php

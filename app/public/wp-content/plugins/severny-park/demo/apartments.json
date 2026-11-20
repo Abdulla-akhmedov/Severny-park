@@ -1,0 +1,137 @@
+[
+  {
+    "id": "21",
+    "title": "Квартира №1",
+    "url": "#apartment-21",
+    "image": "assets/apartment-21.png",
+    "details": [
+      {
+        "label": "Цена",
+        "value": "8 500 000 ₽"
+      },
+      {
+        "label": "Площадь",
+        "value": "42,5 м²"
+      },
+      {
+        "label": "Этаж",
+        "value": "5"
+      },
+      {
+        "label": "Комнат",
+        "value": "1"
+      }
+    ],
+    "price": 8500000,
+    "area": 42.5,
+    "rooms": "1"
+  },
+  {
+    "id": "26",
+    "title": "Квартира №2",
+    "url": "#apartment-26",
+    "image": "assets/apartment-26.png",
+    "details": [
+      {
+        "label": "Цена",
+        "value": "6 200 000 ₽"
+      },
+      {
+        "label": "Площадь",
+        "value": "28 м²"
+      },
+      {
+        "label": "Этаж",
+        "value": "2"
+      },
+      {
+        "label": "Комнат",
+        "value": "Студия"
+      }
+    ],
+    "price": 6200000,
+    "area": 28.0,
+    "rooms": "0"
+  },
+  {
+    "id": "28",
+    "title": "Квартира №3",
+    "url": "#apartment-28",
+    "image": "assets/apartment-28.png",
+    "details": [
+      {
+        "label": "Цена",
+        "value": "11 500 000 ₽"
+      },
+      {
+        "label": "Площадь",
+        "value": "64 м²"
+      },
+      {
+        "label": "Этаж",
+        "value": "7"
+      },
+      {
+        "label": "Комнат",
+        "value": "2"
+      }
+    ],
+    "price": 11500000,
+    "area": 64.0,
+    "rooms": "2"
+  },
+  {
+    "id": "30",
+    "title": "Квартира №4",
+    "url": "#apartment-30",
+    "image": "assets/apartment-30.png",
+    "details": [
+      {
+        "label": "Цена",
+        "value": "15 800 000 ₽"
+      },
+      {
+        "label": "Площадь",
+        "value": "89,5 м²"
+      },
+      {
+        "label": "Этаж",
+        "value": "10"
+      },
+      {
+        "label": "Комнат",
+        "value": "3"
+      }
+    ],
+    "price": 15800000,
+    "area": 89.5,
+    "rooms": "3"
+  },
+  {
+    "id": "32",
+    "title": "Квартира №5",
+    "url": "#apartment-32",
+    "image": "assets/apartment-32.png",
+    "details": [
+      {
+        "label": "Цена",
+        "value": "9 100 000 ₽"
+      },
+      {
+        "label": "Площадь",
+        "value": "46 м²"
+      },
+      {
+        "label": "Этаж",
+        "value": "3"
+      },
+      {
+        "label": "Комнат",
+        "value": "1"
+      }
+    ],
+    "price": 9100000,
+    "area": 46.0,
+    "rooms": "1"
+  }
+]

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Северный парк — предпросмотр нового оформления</title>
+<link rel="stylesheet" href="../catalog.css"><link rel="stylesheet" href="../favorites-page.css">
+<link rel="stylesheet" href="../experience.css"><link rel="stylesheet" href="preview.css">
+</head><body class="sp-experience home post-type-archive-sp_apartment">
+<a class="sp-preview-skip" href="#catalog">Перейти к квартирам</a>
+<div class="wp-site-blocks">
+<header><div class="wp-block-group"><div class="sp-preview-container sp-preview-header"><p class="wp-block-site-title"><a href="#home">Северный парк</a></p>
+<nav class="wp-block-navigation" aria-label="Главная навигация"><a class="wp-block-navigation-item__content" href="#home">Главная</a><a class="wp-block-navigation-item__content" href="#catalog">Квартиры</a><a class="wp-block-navigation-item__content" href="#favorites" data-sp-favorites-link>Избранное</a></nav></div></div></header>
+<main class="sp-preview-container" id="home"><div class="wp-block-post-content">
+<p class="sp-preview-notice">Предпросмотр оформления · демонстрационные квартиры</p>
+<div class="wp-block-group alignwide sp-home-hero sp-hero-has-image">
+<p>Жилой комплекс «Северный парк»</p><h1>Найдите квартиру для вашей жизни</h1>
+<p>Подберите квартиру по цене и количеству комнат. Сравните варианты и сохраните те, к которым хочется вернуться.</p>
+<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link" href="#catalog">Выбрать квартиру ↗</a></div><div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="#favorites">Моё избранное</a></div></div>
+<figure class="sp-hero-visual"><img class="sp-hero-image" src="assets/apartment-32.png" width="768" height="576" fetchpriority="high" alt="Демонстрационный вариант интерьера квартиры"><figcaption>Пространство, которое станет вашим<span>Визуализация интерьера · учебный проект</span></figcaption></figure></div>
+<h2 class="sp-preview-section-title">Как выбрать квартиру</h2>
+<h3>1. Настройте поиск</h3><p>Укажите бюджет и количество комнат, чтобы увидеть подходящие варианты.</p>
+<h3>2. Посмотрите подробности</h3><p>Откройте фотографии и сравните площадь, этаж и стоимость за квадратный метр.</p>
+<h3>3. Сохраните понравившееся</h3><p>Добавьте квартиры в избранное. Выбор останется в этом браузере.</p>
+<section id="catalog" aria-labelledby="catalog-title"><h2 id="catalog-title">Квартиры</h2><p>Ваше новое пространство начинается с выбора.</p>
+<form class="sp-catalog-filters" id="preview-filters">
+<div><label for="rooms">Комнат</label><select id="rooms" name="rooms"><option value="">Любое</option><option value="0">Студия</option><option value="1">1 комната</option><option value="2">2 комнаты</option><option value="3">3 комнаты</option></select></div>
+<div><label for="price-min">Цена от, ₽</label><input id="price-min" name="price_min" type="number" min="0" step="100000" placeholder="Не важно"></div>
+<div><label for="price-max">Цена до, ₽</label><input id="price-max" name="price_max" type="number" min="0" step="100000" placeholder="Не важно"></div>
+<div><label for="sort">Порядок</label><select id="sort" name="sort"><option value="default">По умолчанию</option><option value="price_asc">Сначала дешевле</option><option value="price_desc">Сначала дороже</option><option value="area_desc">Сначала просторнее</option></select></div><button type="submit">Подобрать</button><a href="#catalog" id="preview-reset">Сбросить</a></form>
+<div class="sp-catalog-summary"><p role="status">Подходит квартир: <strong id="preview-count">5</strong></p><p>Сравните до трёх вариантов рядом.</p></div>
+<ul class="wp-block-post-template"><li data-preview-id="21"><article class="sp-apartment-card">
+      <figure class="wp-block-post-featured-image"><a href="#apartment-21"><img src="assets/apartment-21.png" width="768" height="576" loading="lazy" alt="Демонстрационный интерьер: Квартира №1"></a></figure>
+      <h2 class="wp-block-post-title"><a href="#apartment-21">Квартира №1</a></h2>
+      <div class="sp-apartment-card-meta"><p><strong>Цена:</strong> 8 500 000 ₽</p><p><strong>Площадь:</strong> 42,5 м²</p><p><strong>Этаж:</strong> 5</p><p><strong>Комнат:</strong> 1</p></div><button type="button" class="sp-favorite-toggle" data-apartment-id="21" aria-pressed="false">В избранное</button>
+      <a class="wp-block-read-more" href="#apartment-21">Подробнее о квартире</a>
+    </article></li>
+<li data-preview-id="26"><article class="sp-apartment-card">
+      <figure class="wp-block-post-featured-image"><a href="#apartment-26"><img src="assets/apartment-26.png" width="768" height="576" loading="lazy" alt="Демонстрационный интерьер: Квартира №2"></a></figure>
+      <h2 class="wp-block-post-title"><a href="#apartment-26">Квартира №2</a></h2>
+      <div class="sp-apartment-card-meta"><p><strong>Цена:</strong> 6 200 000 ₽</p><p><strong>Площадь:</strong> 28 м²</p><p><strong>Этаж:</strong> 2</p><p><strong>Комнат:</strong> Студия</p></div><button type="button" class="sp-favorite-toggle" data-apartment-id="26" aria-pressed="false">В избранное</button>
+      <a class="wp-block-read-more" href="#apartment-26">Подробнее о квартире</a>
+    </article></li>
+<li data-preview-id="28"><article class="sp-apartment-card">
+      <figure class="wp-block-post-featured-image"><a href="#apartment-28"><img src="assets/apartment-28.png" width="768" height="576" loading="lazy" alt="Демонстрационный интерьер: Квартира №3"></a></figure>
+      <h2 class="wp-block-post-title"><a href="#apartment-28">Квартира №3</a></h2>
+      <div class="sp-apartment-card-meta"><p><strong>Цена:</strong> 11 500 000 ₽</p><p><strong>Площадь:</strong> 64 м²</p><p><strong>Этаж:</strong> 7</p><p><strong>Комнат:</strong> 2</p></div><button type="button" class="sp-favorite-toggle" data-apartment-id="28" aria-pressed="false">В избранное</button>
+      <a class="wp-block-read-more" href="#apartment-28">Подробнее о квартире</a>
+    </article></li>
+<li data-preview-id="30"><article class="sp-apartment-card">
+      <figure class="wp-block-post-featured-image"><a href="#apartment-30"><img src="assets/apartment-30.png" width="768" height="576" loading="lazy" alt="Демонстрационный интерьер: Квартира №4"></a></figure>
+      <h2 class="wp-block-post-title"><a href="#apartment-30">Квартира №4</a></h2>
+      <div class="sp-apartment-card-meta"><p><strong>Цена:</strong> 15 800 000 ₽</p><p><strong>Площадь:</strong> 89,5 м²</p><p><strong>Этаж:</strong> 10</p><p><strong>Комнат:</strong> 3</p></div><button type="button" class="sp-favorite-toggle" data-apartment-id="30" aria-pressed="false">В избранное</button>
+      <a class="wp-block-read-more" href="#apartment-30">Подробнее о квартире</a>
+    </article></li>
+<li data-preview-id="32"><article class="sp-apartment-card">
+      <figure class="wp-block-post-featured-image"><a href="#apartment-32"><img src="assets/apartment-32.png" width="768" height="576" loading="lazy" alt="Демонстрационный интерьер: Квартира №5"></a></figure>
+      <h2 class="wp-block-post-title"><a href="#apartment-32">Квартира №5</a></h2>
+      <div class="sp-apartment-card-meta"><p><strong>Цена:</strong> 9 100 000 ₽</p><p><strong>Площадь:</strong> 46 м²</p><p><strong>Этаж:</strong> 3</p><p><strong>Комнат:</strong> 1</p></div><button type="button" class="sp-favorite-toggle" data-apartment-id="32" aria-pressed="false">В избранное</button>
+      <a class="wp-block-read-more" href="#apartment-32">Подробнее о квартире</a>
+    </article></li></ul><p id="preview-empty" hidden>По этим условиям квартир нет. Попробуйте расширить диапазон цены или сбросить фильтры.</p></section>
+<section id="favorites" class="sp-preview-section" aria-labelledby="favorites-title"><h2 id="favorites-title">Ваше избранное</h2><p>Варианты, к которым удобно вернуться.</p>
+<div class="sp-favorites-page" data-endpoint="sp-preview-api"><p class="sp-favorites-status" role="status"></p><div class="sp-favorites-grid" aria-busy="true"></div></div></section>
+<section class="sp-preview-section" aria-labelledby="photos-title"><h2 id="photos-title">Посмотрите ближе</h2><p>Откройте квартиру и нажмите «Увеличить» на фотографии. В галерее работают клавиши ←, → и Escape.</p><details class="sp-preview-detail single-sp_apartment" id="apartment-21" data-sp-gallery-scope>
+      <summary>Квартира №1 — фотографии и характеристики</summary>
+      <div class="wp-block-gallery"><figure><img src="assets/gallery-21-1.png" width="768" height="576" loading="lazy" alt="Квартира №1: вариант интерьера, фото 1"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure><figure><img src="assets/gallery-21-2.png" width="768" height="576" loading="lazy" alt="Квартира №1: вариант интерьера, фото 2"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure></div>
+      <section class="sp-apartment-details"><h2>Характеристики</h2><table><tr><th scope="row">Цена</th><td>8 500 000 ₽</td></tr><tr><th scope="row">Площадь</th><td>42,5 м²</td></tr><tr><th scope="row">Этаж</th><td>5</td></tr><tr><th scope="row">Комнат</th><td>1</td></tr></table></section>
+      <section class="sp-single-tools"><p class="sp-unit-price"><span>Стоимость за квадратный метр</span><strong>200 000 ₽/м²</strong></p><div class="sp-single-actions"><button type="button" class="sp-favorite-toggle" data-apartment-id="21" aria-pressed="false">В избранное</button></div></section>
+    </details>
+<details class="sp-preview-detail single-sp_apartment" id="apartment-26" data-sp-gallery-scope>
+      <summary>Квартира №2 — фотографии и характеристики</summary>
+      <div class="wp-block-gallery"><figure><img src="assets/gallery-26-1.png" width="768" height="576" loading="lazy" alt="Квартира №2: вариант интерьера, фото 1"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure><figure><img src="assets/gallery-26-2.png" width="768" height="576" loading="lazy" alt="Квартира №2: вариант интерьера, фото 2"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure></div>
+      <section class="sp-apartment-details"><h2>Характеристики</h2><table><tr><th scope="row">Цена</th><td>6 200 000 ₽</td></tr><tr><th scope="row">Площадь</th><td>28 м²</td></tr><tr><th scope="row">Этаж</th><td>2</td></tr><tr><th scope="row">Комнат</th><td>Студия</td></tr></table></section>
+      <section class="sp-single-tools"><p class="sp-unit-price"><span>Стоимость за квадратный метр</span><strong>221 429 ₽/м²</strong></p><div class="sp-single-actions"><button type="button" class="sp-favorite-toggle" data-apartment-id="26" aria-pressed="false">В избранное</button></div></section>
+    </details>
+<details class="sp-preview-detail single-sp_apartment" id="apartment-28" data-sp-gallery-scope>
+      <summary>Квартира №3 — фотографии и характеристики</summary>
+      <div class="wp-block-gallery"><figure><img src="assets/gallery-28-1.png" width="768" height="576" loading="lazy" alt="Квартира №3: вариант интерьера, фото 1"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure><figure><img src="assets/gallery-28-2.png" width="768" height="576" loading="lazy" alt="Квартира №3: вариант интерьера, фото 2"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure></div>
+      <section class="sp-apartment-details"><h2>Характеристики</h2><table><tr><th scope="row">Цена</th><td>11 500 000 ₽</td></tr><tr><th scope="row">Площадь</th><td>64 м²</td></tr><tr><th scope="row">Этаж</th><td>7</td></tr><tr><th scope="row">Комнат</th><td>2</td></tr></table></section>
+      <section class="sp-single-tools"><p class="sp-unit-price"><span>Стоимость за квадратный метр</span><strong>179 688 ₽/м²</strong></p><div class="sp-single-actions"><button type="button" class="sp-favorite-toggle" data-apartment-id="28" aria-pressed="false">В избранное</button></div></section>
+    </details>
+<details class="sp-preview-detail single-sp_apartment" id="apartment-30" data-sp-gallery-scope>
+      <summary>Квартира №4 — фотографии и характеристики</summary>
+      <div class="wp-block-gallery"><figure><img src="assets/gallery-30-1.png" width="768" height="576" loading="lazy" alt="Квартира №4: вариант интерьера, фото 1"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure><figure><img src="assets/gallery-30-2.png" width="768" height="576" loading="lazy" alt="Квартира №4: вариант интерьера, фото 2"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure></div>
+      <section class="sp-apartment-details"><h2>Характеристики</h2><table><tr><th scope="row">Цена</th><td>15 800 000 ₽</td></tr><tr><th scope="row">Площадь</th><td>89,5 м²</td></tr><tr><th scope="row">Этаж</th><td>10</td></tr><tr><th scope="row">Комнат</th><td>3</td></tr></table></section>
+      <section class="sp-single-tools"><p class="sp-unit-price"><span>Стоимость за квадратный метр</span><strong>176 536 ₽/м²</strong></p><div class="sp-single-actions"><button type="button" class="sp-favorite-toggle" data-apartment-id="30" aria-pressed="false">В избранное</button></div></section>
+    </details>
+<details class="sp-preview-detail single-sp_apartment" id="apartment-32" data-sp-gallery-scope>
+      <summary>Квартира №5 — фотографии и характеристики</summary>
+      <div class="wp-block-gallery"><figure><img src="assets/gallery-32-1.png" width="768" height="576" loading="lazy" alt="Квартира №5: вариант интерьера, фото 1"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure><figure><img src="assets/gallery-32-2.png" width="768" height="576" loading="lazy" alt="Квартира №5: вариант интерьера, фото 2"><figcaption>Визуализация интерьера · учебный проект</figcaption></figure></div>
+      <section class="sp-apartment-details"><h2>Характеристики</h2><table><tr><th scope="row">Цена</th><td>9 100 000 ₽</td></tr><tr><th scope="row">Площадь</th><td>46 м²</td></tr><tr><th scope="row">Этаж</th><td>3</td></tr><tr><th scope="row">Комнат</th><td>1</td></tr></table></section>
+      <section class="sp-single-tools"><p class="sp-unit-price"><span>Стоимость за квадратный метр</span><strong>197 826 ₽/м²</strong></p><div class="sp-single-actions"><button type="button" class="sp-favorite-toggle" data-apartment-id="32" aria-pressed="false">В избранное</button></div></section>
+    </details></section>
+<p class="sp-preview-notice">Это локальный предпросмотр, а не работающий WordPress. Данные и изображения взяты из учебного проекта. Фотографии — визуализации, они не подтверждают характеристики реальных квартир.</p>
+</div></main>
+<footer><div class="wp-block-group"><div class="sp-preview-container sp-preview-footer"><p class="wp-block-site-title">Северный парк</p><p>Учебный проект · Ахмедов Абдулла</p><nav class="wp-block-navigation"><a href="#catalog">Квартиры</a><a href="#favorites" data-sp-favorites-link>Избранное</a></nav></div></div></footer></div>
+<script src="preview-data.js"></script><script src="../favorites.js"></script><script src="../favorites-page.js"></script><script src="../experience.js"></script>
+</body></html>

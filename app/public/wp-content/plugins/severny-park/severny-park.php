@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Северный парк — каталог квартир
  * Description: Управление квартирами жилого комплекса.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Author: Ахмедов Абдулла
  */
 
@@ -543,3 +543,4 @@ add_action(
 );
 
 require_once __DIR__ . '/favorites-page.php';
+require_once __DIR__ . '/experience.php';
