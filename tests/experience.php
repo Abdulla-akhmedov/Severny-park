@@ -39,7 +39,10 @@ function home_url($path) { return 'https://example.test/subdir' . $path; }
 function get_posts($query) { $GLOBALS['queries'][] = $query; return [(object) ['ID' => 21]]; }
 function get_the_post_thumbnail($id, $size, $attrs) { return $GLOBALS['context']['image']; }
 function __($text) { return $text; }
+function wp_kses_uri_attributes() { return ['href', 'src']; }
 function _doing_it_wrong($function, $message, $version) { throw new RuntimeException($function . ': ' . $message); }
+require_once ABSPATH . WPINC . '/class-wp-token-map.php';
+require_once ABSPATH . WPINC . '/utf8.php';
 spl_autoload_register(function ($class) {
     if (!str_starts_with($class, 'WP_HTML_')) return;
     $path = ABSPATH . WPINC . '/html-api/class-' . strtolower(str_replace('_', '-', $class)) . '.php';

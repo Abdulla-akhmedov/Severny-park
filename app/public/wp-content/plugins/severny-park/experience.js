@@ -68,6 +68,7 @@
         let previousFocus = null;
         let comparisonRequest = 0;
         let galleryIndex = 0;
+        let activeGallery = [];
         const gallery = [];
 
         function node(tag, className, text) {
@@ -381,15 +382,15 @@
         galleryDialog.append(galleryFigure, galleryControls);
 
         function showImage(index) {
-            if (!gallery.length) return;
-            galleryIndex = Math.max(0, Math.min(index, gallery.length - 1));
-            const image = gallery[galleryIndex];
+            if (!activeGallery.length) return;
+            galleryIndex = Math.max(0, Math.min(index, activeGallery.length - 1));
+            const image = activeGallery[galleryIndex];
             galleryImage.src = image.src;
             galleryImage.alt = image.alt;
             galleryCaption.textContent = image.caption || image.alt;
-            galleryCounter.textContent = String(galleryIndex + 1) + ' / ' + gallery.length;
+            galleryCounter.textContent = String(galleryIndex + 1) + ' / ' + activeGallery.length;
             previousImage.disabled = galleryIndex === 0;
-            nextImage.disabled = galleryIndex === gallery.length - 1;
+            nextImage.disabled = galleryIndex === activeGallery.length - 1;
             showDialog(galleryDialog);
         }
         previousImage.addEventListener('click', () => showImage(galleryIndex - 1));
@@ -416,12 +417,16 @@
                 const url = safeUrl(source, window.location.href);
                 if (!url) return;
                 const index = gallery.length;
-                gallery.push({src: url, alt: image.alt || 'Визуализация интерьера квартиры', caption: caption ? caption.textContent : ''});
+                const entry = {src: url, alt: image.alt || 'Визуализация интерьера квартиры', caption: caption ? caption.textContent : '', scope: figure.closest('[data-sp-gallery-scope]') || document.body};
+                gallery.push(entry);
                 figure.dataset.spZoom = 'true';
                 figure.classList.add('sp-zoomable');
                 const zoom = button('sp-image-zoom', 'Увеличить');
                 zoom.setAttribute('aria-label', 'Увеличить фотографию ' + String(index + 1));
-                zoom.addEventListener('click', () => showImage(index));
+                zoom.addEventListener('click', () => {
+                    activeGallery = gallery.filter(item => item.scope === entry.scope);
+                    showImage(activeGallery.indexOf(entry));
+                });
                 figure.append(zoom);
             });
         }
